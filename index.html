@@ -11,15 +11,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;1,500&display=swap"
     rel="stylesheet">
   <!--  -->
-  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="style.css">
+  <!-- Attempt at script to get common header  -->
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      });
+  </script>
 </head>
 
 <body>
   <main class="container">
-    <section class="header">
-      <h1 class="section-title">KALEENA DYBAS</h1>
-      <h3 class="section-title">ARTIST | ILLUSTRATOR | DESIGNER</h3>
-    </section>
+    <div id="header-placeholder"></div>
     <hr />
     <div class="flex-layout">
       <div class="sidebar">
@@ -61,6 +66,8 @@
             <p>2008</p>
           </div>
         </section>
+        <hr />
+
         <section class="section">
           <p>
             <a href="/projects.html">Link to Projects</a>
