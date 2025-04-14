@@ -1,66 +1,111 @@
+/* Resets https://meyerweb.com/eric/tools/css/reset/ */
+* {
+  /* margin: 0; */
+  padding: 0;
+  box-sizing: border-box;
+  border-width: 0px;
+  border-style: none;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
+  font-family: 'Roboto', sans-serif;
+  color: #575757;
+  background-color: #ffffff;
+  margin-bottom: 4rem;
+  line-height: 1.4;
 }
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+/* Line Break */
+hr {
+  color: #f6ba83;
+  background-color: #f6ba83;
+  height: 5px;
+  width: 85%;
+  margin: auto;
 }
-h1,
-h2 {
-    color: #007bff;
+
+/* Google Font */
+.section-title {
+  font-family: "Hanken Grotesk", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: 0.2em;
 }
+
 .header {
-    text-align: center;
+  text-align: center;
+
+  & h1 {
+    font-size: clamp(1rem, 4vw, 5rem);
+  }
+
+  & h3 {
+    font-size: clamp(.75rem, 2vw, 3rem);
+  }
 }
+
+/* Nested this into the above style
 .header h1 {
-    margin: 10px 0;
+  font-size: 4vw
+} 
+.header h3 {
+  font-size: 2vw
+} 
+*/
+
+.flex-layout {
+  display: flex;
+  gap: 20px;
 }
-.contact {
-    margin: 10px 0;
-    font-size: 14px;
+
+/* Sidebar Styles */
+.sidebar {
+  width: 35%;
+  background-color: #cee3fa;
+  padding-left: 4rem;
+  padding-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
-.contact a {
-    color: #007bff;
-    text-decoration: none;
+
+.sidebar hr {
+  border-top:2px dashed #575757;
+  background-color: unset;
+  width: 100%;
+  margin: inherit;
 }
-.section {
-    margin: 20px 0;
+
+.sidebar li {
+  margin-bottom: 8px;
+  font-size: 1em;
 }
-.section h2 {
-    margin-bottom: 10px;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
+
+.contact p a {
+  text-decoration: none;
+  color: inherit;
 }
-.item {
-    margin-bottom: 15px;
-}
-.item h3 {
+
+.edu-item {
+  margin-bottom: 20px;
+  & h4 {
+    margin: 4px 0;
+  }
+  & h5, p {
     margin: 0;
-    font-size: 18px;
-    color: #555;
+  }
 }
-.item p {
-    margin: 5px 0;
-    font-size: 14px;
+
+/* Profile and Experience Container */
+.main-content {
+  width: 65%;
+  padding-right: 4rem;
 }
-.skills/li {
-    list-style: none;
-    padding: 0;
-}
-.skills/li li {
-    display: inline-block;
-    background: #007bff;
-    color: #fff;
-    padding: 5px 10px;
-    margin: 5px 5px 5px 0;
-    border-radius: 4px;
+
+.main-content hr {
+  border-top:2px dashed #f6ba83;
+  background-color: unset;
+  width: 100%;
+  margin: inherit;
 }
