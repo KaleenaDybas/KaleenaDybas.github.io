@@ -57,6 +57,7 @@ hr {
 .flex-layout {
   display: flex;
   gap: 20px;
+  justify-content: center;
 }
 
 /* Sidebar Styles */

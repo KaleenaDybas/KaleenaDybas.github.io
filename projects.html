@@ -1,16 +1,3 @@
-<!-- 
- 🚀 DONE -- Create a new html page called projects.html.
-
-Your projects page should showcase at least three projects from your GitHub profile. 
-- The project should have a name (this can be the repo name) that links to the project repository. 
-- Each project should have a short description.
-
- 🚀 DONE -- In index.html create a link to your projects page.
-
- 🚀 DONE -- Add CSS styling to both pages that is consistent. DO NOT add your CSS to the html files. All styles must be within a linked CSS file.
- 🚀 DONE -- Remove any styling you may have within index.html.
-Once you are finished, push your changes to GitHub and submit the repo link below. -->
-
 <!DOCTYPE html>
 <html>
 
@@ -24,13 +11,18 @@ Once you are finished, push your changes to GitHub and submit the repo link belo
   <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;1,500&display=swap"
     rel="stylesheet">
   <!--  Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
   <!-- Attempt at script to get common header  -->
   <script>
     fetch('header.html')
       .then(response => response.text())
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
+      });
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
       });
   </script>
 </head>
@@ -39,7 +31,7 @@ Once you are finished, push your changes to GitHub and submit the repo link belo
   <main>
     <div id="header-placeholder"></div>
     <hr />
-    <section class="section">
+    <section>
       <h3 class="section-title">PROJECTS</h3>
       <div class="item">
         <!-- - The project should have a name (this can be the repo name) that links to the project repository.  -->
@@ -65,11 +57,15 @@ Once you are finished, push your changes to GitHub and submit the repo link belo
         <img src="img/patterns.png" alt="Pattern" width="50%">
       </div>
     </section>
-    <section class="section">
+    <section>
       <p>
-        <a href="/index.html"> <- Return to Resume</a>
+        <a href="/resume.html"> Resume</a>
+      </p>
+      <p>
+        <a href="/index.html"> Home </a>
       </p>
     </section>
     <hr />
+    <div id="footer-placeholder"></div>
   </main>
 </html>
