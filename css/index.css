@@ -6,14 +6,25 @@ screen to a desktop sized screen
 (use Flexbox and/or Grid where it is 
 appropriate.) */
 
+.home {
+  text-align: center;
+  border: 2px solid #f4a261; 
+  padding: 30px 50px; 
+  border-radius: 8px;
+  margin: 50px;
+}
 
-@media screen and (min-width: 768px) {
-  .hide {
-    display: none;
+#home-nav {
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .home {
+    margin: 20px;
+    padding: 10px;
   }
-
-  #flex,
-  #grid {
-    display: grid;
+  #home-nav {
+    margin-bottom: 10px;
   }
 }
