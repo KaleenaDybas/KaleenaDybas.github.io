@@ -22,6 +22,11 @@
       .then(data => {
         document.getElementById('header-placeholder').innerHTML = data;
       });
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
   </script>
 </head>
 
@@ -47,6 +52,7 @@
       </div>
     </div>
     <hr />
+    <div id="footer-placeholder"></div>
   </main>
 </body>
 
